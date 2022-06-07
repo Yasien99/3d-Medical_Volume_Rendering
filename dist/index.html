@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #page {
+            width: 100vw;
+            height: 100vh;
+            justify-content: space-between;
+            display: flex;
+            overflow: hidden;
+        }
+
+        #container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        #control-panel {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #examples-menu,
+        #presets-menu {
+            font-size: 16px;
+        }
+
+        #control-panel h2 {
+            margin-top: 0;
+        }
+
+        #title {
+            border-bottom: 3px solid;
+            width: 100%;
+            background-color: #b0b0b0;
+        }
+
+        #iso-control {
+            visibility : hidden;
+            min-width: 400px;
+        }
+
+        #iso-control,
+        #cropping-control {
+            font-size: 16px;
+            width: 95%;
+            border-radius: 10px;
+            border: solid 1.5px #52576e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page">
+        <div id="control-panel">
+            <div id="title">
+                <h2>Control Panel</h2>
+            </div>
+            <select id="examples-menu">
+                <option value="RAY_CASTING">Ray Casting</option>
+                <option value="MARCHING_CUBES">Marching Cubes</option>
+            </select>
+            <table id="iso-control">
+                <tr>
+                    <td>Iso value</td>
+                    <td>
+                        <input class='isoValue' type="range" min="0.0" max="1.0" step="0.05" value="0.0" />
+                    </td>
+                </tr>
+            </table>
+            <table id="cropping-control">
+                <tr>
+                    <td>pickable</td>
+                    <td>
+                        <input class='flag' data-name="pickable" type="checkbox" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>visibility</td>
+                    <td>
+                        <input class='flag' data-name="visibility" type="checkbox" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>contextVisibility</td>
+                    <td>
+                        <input class='flag' data-name="contextVisibility" type="checkbox" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>handleVisibility</td>
+                    <td>
+                        <input class='flag' data-name="handleVisibility" type="checkbox" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>faceHandlesEnabled</td>
+                    <td>
+                        <input class='flag' data-name="faceHandlesEnabled" type="checkbox" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>edgeHandlesEnabled</td>
+                    <td>
+                        <input class='flag' data-name="edgeHandlesEnabled" type="checkbox" checked />
+                    </td>
+                </tr>
+                <tr>
+                    <td>cornerHandlesEnabled</td>
+                    <td>
+                        <input class='flag' data-name="cornerHandlesEnabled" type="checkbox" checked />
+                    </td>
+                </tr>
+            </table>
+            <div id="ray-transfer-function"></div>
+            <select id="presets-menu">
+                <option selected value="Cool to Warm">Cool to Warm</option>
+                <option value="Cold and Hot">Cold and Hot</option>
+                <option value="Black, Blue and White">Black, Blue and White</option>
+                <option value="X Ray">X Ray</option>
+                <option value="erdc_rainbow_dark">Edrc Rainbow Dark</option>
+            </select>
+        </div>
+        <div id="container"></div>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>
