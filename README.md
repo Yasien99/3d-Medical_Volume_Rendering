@@ -1,7 +1,6 @@
 # 3D medical viewer (VTK) 
 
 - [Description](#description)
-- [Team](#team)
 - [Samples](#samples)
 - [Implementation Details](#implementation-details)
     - [Thought Process](#thought-process)
