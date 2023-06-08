@@ -11,15 +11,6 @@
 ## Description
 A 3D medical viewer built with vtk-js that supports volume rendering with multiple presets and marching cubes.
 
-## Team
-### Team Members
-| Name|
-|----------------|
-| Saied Salem|
-| Mohamed Ibrahim|
-| Moaaz Nasser|
-| Yasin Essam|
-
 ## Samples
 ![Demo Sample](docs/demo.png)
 ![Demo2 Sample](docs/demo2.png)
